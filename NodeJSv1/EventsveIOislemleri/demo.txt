@@ -1,0 +1,5 @@
+Nodejs ile beni okuyabilir misin?bu cümle fs.appendFile ile eklenmiştir!bu cümle fs.appendFile ile eklenmiştir!bu cümle fs.appendFile ile eklenmiştir!
+bu cümle fs.appendFile ile eklenmiştir!
+bu cümle fs.appendFile ile eklenmiştir!
+bu cümle fs.appendFile ile eklenmiştir!
+bu cümle fs.appendFile ile eklenmiştir!

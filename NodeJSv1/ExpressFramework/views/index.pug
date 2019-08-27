@@ -1,0 +1,33 @@
+html
+    head
+        title PUG Learning
+    body
+        span(style="color:white; background-color:black") 
+            |Ulan biz HTML'i zor öğreniyorduk adam PUG'a geçti!
+            br
+            // direk js dosyamızdaki değişkenleri aldık(render ettiğimiz bloktan)
+            |Bu bize reva mı #{name} #{surname}
+            br
+            |Benim mesleğim:
+            hr
+            =job
+            hr
+            // pug'da başka bir pug dosyasını include ettik
+            include footer.pug
+            br
+            // pug ile değişken oluşturma
+            - var okul = 'lise'
+            - var sehir = 'İstanbul'
+            | Okuduğum okul #{okul} ve bulunduğum şehir #{sehir.toUpperCase()}
+            br
+            // PUG ile if koşulları yazabiliriz
+            - var maas = 5001
+            if(maas<5000)
+                |Maaşın 5000'den az
+            else
+                |Maaşın 5000'den fazla
+            br
+            // PUG ile loop
+            ul
+                each val in [1, 2, 3, 4, 5]
+                     li= val

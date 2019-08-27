@@ -1,0 +1,40 @@
+npm install paketAdi  //-> paket yüklemeye yarar(lokal)
+npm install -g paketAdi //-> paketi bilgisayara yükler
+ indirdiğimiz paketi dosyamıza import etmeliyiz (require)
+
+ npm init -> json paket dosyası oluşturur
+    - entry point -> projenin ana dosyası
+
+npm init -y -> dosyayı direkt oluşturur sonra siz içerden düzenleyebilirsiniz
+
+npm install paketAdi --save -> oluşturduğumu package dosyamıza ekler
+
+npm install paketAdi --save-dev -> developer paketleri altına yükler
+
+cd dosyaAdi npm install -> farklı bir dizine package dosyamızı attık ve içindeki paketleri yüklemek istersek bu komutu yazarız paket dosyamız içinde ne kadar paket varsa hepsini dosyaya yükler
+
+npm install paketAdi@3.2 -> özellikle istediğimiz bir versiyon varsa bu kodu çalıştırırz
+
+npm outdated -> eski paketlerimiz varsa yeni versiyonları görmek istersek bu komutu kullanırız
+
+npm update paketAdi -> paketi son sürüme yükseltir
+
+npm update  -> bütün paketleri güncelleyecektir
+
+{
+package dosyamızda dependencies içinde bulunan paketler olmazsa olmazımızdır.
+dev dependencies eklemek istersek npm install paketAdi --save-dev -> komutuyla dev-dependencies altına kurar
+}
+{
+    SCRIPT TANIMLAMA
+package json dosyası altında scripts bloğuna;
+"selamVer" : "echo 'merhaba ben baysan'nın ilk scriptiyim'" -> npm run selamVer --> diyerek bu scripti çalıştırırz     
+
+}
+
+{
+    PAKET KALDIRMA
+npm uninstall paketAdi  -> paketi kaldırır
+npm uninstall paketAdi --no-save  -> paketi dependecies'den kaldırmaz sadece developer bölümünden kaldırır
+npm uninstall -g paketAdi  -> paketi globalden kaldırır
+}

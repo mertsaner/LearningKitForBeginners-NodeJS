@@ -1,0 +1,22 @@
+{
+  "name": "baysanpaket",
+  "version": "1.0.0",
+  "description": "denemepaketi",
+  "main": "main.js",
+  "dependencies": {
+    "mongoose": "^5.5.5",
+    "nodemailer": "^6.1.1",
+    "slugify": "^1.3.4",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "selamVer": "echo 'merhaba ben baysanın ilk scriptiyim'"
+  },
+  "keywords": [
+    "deneme"
+  ],
+  "author": "baysan",
+  "license": "ISC"
+}

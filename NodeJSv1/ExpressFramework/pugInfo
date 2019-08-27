@@ -1,0 +1,7 @@
+pug -> express için bir tema oluşturucudur
+
+npm install pug -> yükler
+
+pug view nesnelerini varsayılan olarak 'views' klasörü altından okur!
+
+express . --view=pug   -> view template'i pug olarak günceller 

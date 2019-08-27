@@ -1,0 +1,20 @@
+mongo yükledikten sonra ;
+
+mongo -> terminale yazarsak mongo komut arayüzü çıkar
+
+show dbs -> kaç database vasrsa hepsini listeler
+
+use dbAdi  -> o veritabanını kullanmaya başlarız
+
+show collections -> o vertibanındaki bütün collection'ları listeler
+
+
+        ROBOMONGO
+mongodb için gui sağlayan bir program
+
+        MONGOOSE
+
+NodeJs'de mongodb'ye bağlanmak için kullandığımız adaptörün adı mongoose'dir.
+
+npm install mongoose -> mongoose paketi kurar
+

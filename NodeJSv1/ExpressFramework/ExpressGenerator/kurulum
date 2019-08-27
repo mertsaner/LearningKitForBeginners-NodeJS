@@ -1,0 +1,9 @@
+npm install -g express-generator
+
+express myApp -> verdiğin isimde bir dizine uygulamayı kurar
+
+express .  -> bulunduğu dizine uygulamayı kurar
+
+npm install -> uygulamanın bağımlılıklarını yükler
+
+npm start -> uygulamayı çalıştırır
