@@ -1,0 +1,22 @@
+npm install -g express-generator
+npm install -g nodemon
+express . --view=pug
+
+ÖNEMLİ NOT!
+hazır bir html şablonu pug'a çevirirken internet sitesinden olduğu gibi kopyalayınca bir çok sıkıntıyla karşılaşacaksın!
+
+views altındaki pug dosyaları otomatik olarak stil dosyalarını(js,css,images vs..) otomatik olarak public altında arar. Onun için dosyaların yolunu belirtirken başına public koyma o zaten otomatik orda arayacak.
+ÖR:
+link(rel='stylesheet', href='stylesheets/style.css') -> public altındaki stylesheets altındaki style.css dosyası (public/stylesheets/style.css)
+img(src='images/Storm.png' -> public altındaki images dosyası altındaki Storm.png (public/images/Storm.png)
+img(src='ss/2.png'
+
+
+PUG ÖZELLİKLERİ
+
+extends -> bir class'tan inherit etmek gibi düşünebiliriz. O pug dosyasından kalıtım yapıyor.
+block blokAdi -> block sayesinde belirli kısımları değişime açabiliriz.
+title #{title}    -> title adlı bir değişen belirledik bunu router'da sayfayı render ederken yollayabiliriz. Burada da  title elementinin değerini sayfa render edilirken router'dan gelen {title:'Title Değeri'} ile değiştir dedik.
+each product in products -> products listesi içindeki her product için
+${product.name} -> pug dosyası içerisinde bu şekilde router'dan gelen objenin name field'ına erişebilirz.
+include ../includes/navbar.pug  -> mesela sayfamızda farklı bir pug dosyasını birleştirmek istersek (sayfamıza navbar.pug'ı dahil edecek)
