@@ -1,0 +1,18 @@
+Sürekli entegrasyon (continous entegration)
+
+https://travis-ci.org/ -> github hesabı ile giriş yap
+
+.travis.yml  -> kök dizine böyle bir file kurulur
+
+
+language: node_js  -> hangi dilde yazıldığını belirttik
+
+node_js:
+  -8  -> dilin hangi versiyonu
+
+  before_install:  -> çalışmadan önce hangi komutlar çalışsın
+    - npm install
+    - export NODE_ENV=production
+
+script:  -> hangi scriptler çalışsın
+  -npm run test

@@ -1,0 +1,8 @@
+npm install mocha chai chai-http --save-dev
+
+ÖNEMLİ HATIRLATMA!!
+package json içine scripts kısmına;
+"test":"mocha" komutunu ekleyin ve test için  (mocha --exit yazılabilir // mongodb bağlantısına takılmaması için, --recursive yazılabilir test folder altındaki tüm dizinlerdeki test komutlarını çalıştırmak için)
+npm test  yazıp çalıştırın
+
+"test":"mocha --exit --recursive" // test dosyalarını test folder altına yazmak daha mantıklı olur(zorunlu gibi bir şey :P)

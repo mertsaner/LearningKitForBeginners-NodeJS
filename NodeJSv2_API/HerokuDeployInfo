@@ -1,0 +1,14 @@
+heroku.com gir üye ol
+https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up
+heroku cli bilgisayarına kur 
+
+heroku login -> komut satırına gir ve heroku hesabına giriş yap
+
+heroku create projeAdi -> projemize heroku configuration yapar proje adini istersen gir özel bir isim istersen yoksa heroku kendisi random isim atar
+
+git için bir remote ekledi 
+
+git remote -> kaç adet remote(projeyi yazdıkça pushlamaya yarar) olduğuna bakar
+
+git push heroku master -> projeyi herokuya deploy eder
+
