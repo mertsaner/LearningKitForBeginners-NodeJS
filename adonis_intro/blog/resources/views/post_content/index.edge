@@ -4,11 +4,27 @@
 @endsection
 
 @section('content')
+<br>
     <h1>{{title}}</h1>
-    <ul class="list-group">
+    <br>
+    <table class="table table-hover table-striped table-border table-light">
+      <thead>
+          <th class="text-center">Name</th>
+          <th class="text-center">İşlemler</th>
+      </thead>
+      <tbody>
         @each(post in post_list)
-          <li class="list-group-item mb-3 shadow">{{post.title}}</li>
-        @endeach
-        </ul>
+        <tr class="text-center">
+          <td>{{post.title}}</td>
+          <td>
+          <a href="/posts/{{post.id}}" class="btn btn-sm btn-primary">Görüntüle</a>
+            <a href="#" class="btn btn-sm btn-info">Güncelle</a>
+            <a href="#" class="btn btn-sm btn-danger">Sil</a>
+          </td>
+        </tr>
+      @endeach
+      </tbody>
+       
+        </table>
 
 @endsection

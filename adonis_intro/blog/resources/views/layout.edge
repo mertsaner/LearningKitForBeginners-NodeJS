@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{style("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")}}
+    {{style("style")}}
     <!-- Django'daki {% static ('') %} gibi -->
     <title>
         @section('title')
@@ -12,6 +13,8 @@
     </title>
 </head>
 <body>
+    @include('includes/navbar')
+    <!-- bir componenti include ettik -->
     <div class="container">
         @section('content') 
         <!--Django'daki block -->

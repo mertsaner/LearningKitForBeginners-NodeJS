@@ -1,5 +1,6 @@
-adonis make:migration posts  (table) -> bizim için bir migration file açar
+adonis make:migration posts  (table) -> bizim için bir migration file açar ve içerisine post model içerisinde olacak field'ları yazarız
 adonis migration:run  -> bekleyen migrationları yapar
+adonis make:model post-> model oluştururuz
 !* .env içerisinde db ayarlarınızı yapın. database/klasörü altında belirleyin
 
 adonis make:model Post -> Post modeli oluşturur

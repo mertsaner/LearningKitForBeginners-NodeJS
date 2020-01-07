@@ -17,7 +17,9 @@
 const Route = use('Route')
 
 //Route.on('/').render('home')
-Route.get('/','PostController.index')
+Route.get('/','PostController.home')
+Route.get('/posts','PostController.index')
+Route.get('/posts/:id','PostController.detail')
 Route.get('/parametreli/:name', ({ params }) => {
     let ad = params.name;
     return `Merhaba ${ad} hoş geldin!`
