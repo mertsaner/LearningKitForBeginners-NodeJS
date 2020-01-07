@@ -1,0 +1,14 @@
+@layout('layout')
+@section('title')
+  {{title}}
+@endsection
+
+@section('content')
+    <h1>{{title}}</h1>
+    <ul class="list-group">
+        @each(post in post_list)
+          <li class="list-group-item mb-3 shadow">{{post.title}}</li>
+        @endeach
+        </ul>
+
+@endsection
