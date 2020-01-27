@@ -16,5 +16,47 @@ const notes = require('./notes')
 
 const msg = notes.get_all_notes()
 
-console.log(chalk.red.bold.inverse(msg))
-console.log(chalk.green.bgWhite.bold('Success!'))
+// console.log(chalk.red.bold.inverse(msg))
+// console.log(chalk.green.bgWhite.bold('Success!'))
+
+// const command = process.argv[2]; // node dosya_adi.js yapıp çalıştırınca yolladığımız diğer parametreleri almamıza yarar.
+
+// if (command === 'ekle') {
+//     console.log(chalk.green.bold('Not ekleniyor...'));
+// } else if (command === 'sil') {
+//     console.log(chalk.red.bold('Not siliniyor...'));
+// }
+
+const yargs = require('yargs'); // yukarıdaki gibi komutları parçalamamız zor olduğu için yargs isimli paketi yüklüyoruz.(npm install yargs)
+
+yargs.version('1.1.0'); // yargs'ın versiyonunu customize edebiliriz
+
+yargs.command({
+    command: 'ekle', // komutun adı
+    describe: 'Yeni bir not ekleyebilirsiniz', // komutun açıklaması
+    handler: () => { // komut çalıştırılınca gerçekleştirilecek fonksiyon
+        console.log(chalk.green.bold('Yeni not başarıyla eklendi...'));
+    }
+});
+yargs.command({
+    command: 'sil', // komutun adı
+    describe: 'Bir not silebilirsiniz', // komutun açıklaması
+    handler: () => { // komut çalıştırılınca gerçekleştirilecek fonksiyon
+        console.log(chalk.red.bold('Not başarıyla silindi...'));
+    }
+});
+yargs.command({
+    command: 'listele', // komutun adı
+    describe: 'Bütün Notları Listeleyebilirsiniz', // komutun açıklaması
+    handler: () => { // komut çalıştırılınca gerçekleştirilecek fonksiyon
+        console.log(chalk.blue.bold('Not listesi...'));
+    }
+});
+yargs.command({
+    command: 'oku', // komutun adı
+    describe: 'Bir not okuyabilirsiniz', // komutun açıklaması
+    handler: () => { // komut çalıştırılınca gerçekleştirilecek fonksiyon
+        console.log(chalk.yellow.bold('Not okunuyor...'));
+    }
+});
+console.log(yargs.argv);

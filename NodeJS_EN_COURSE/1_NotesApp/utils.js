@@ -1,9 +1,9 @@
-// const name = 'Baysan'
+const name = 'Baysan'
 
-// const topla = (a, b) => a + b;
+const topla = (a, b) => a + b;
 
-// module.exports = {
-//     name: name,
-//     topla:topla,
-// }
+module.exports = {
+    name: name,
+    topla:topla,
+}
 
