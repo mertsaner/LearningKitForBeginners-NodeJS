@@ -1,4 +1,4 @@
-// const fs = require('fs'); // FileSystem modülünü bir değişkene atadık
+//const fs = require('fs'); // FileSystem modülünü bir değişkene atadık
 
 // fs.writeFileSync('notes.txt', 'Bu dosya NodeJs ile oluşturuldu! \n'); // ilk parametre dosya adı, diğer parametre içerik. dosyayı açar yazar, eğer dosya varsa siler ve tekrar oluşturur
 
@@ -10,8 +10,11 @@
 // console.log(utils.name)
 // console.log('utils.js den gelen topla fonksiyonu ile oluşan sayi değişkeni = ' + sayi)
 
-const notes = require('./notes.js')
+const validator = require('validator') // npm paketlerini bu şekilde path belirtmeden bulabiliyoruz
+const chalk = require('chalk')
+const notes = require('./notes')
 
 const msg = notes.get_all_notes()
 
-console.log(msg)
+console.log(chalk.red.bold.inverse(msg))
+console.log(chalk.green.bgWhite.bold('Success!'))
