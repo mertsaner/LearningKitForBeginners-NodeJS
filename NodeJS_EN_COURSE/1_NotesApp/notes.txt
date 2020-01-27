@@ -1,0 +1,2 @@
+Bu dosya NodeJs ile oluşturuldu! 
+Bu dosyaya appendFileSync ile eklendi!
