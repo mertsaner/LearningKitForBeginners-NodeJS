@@ -34,29 +34,61 @@ yargs.version('1.1.0'); // yargs'ın versiyonunu customize edebiliriz
 yargs.command({
     command: 'ekle', // komutun adı
     describe: 'Yeni bir not ekleyebilirsiniz', // komutun açıklaması
-    handler: () => { // komut çalıştırılınca gerçekleştirilecek fonksiyon
-        console.log(chalk.green.bold('Yeni not başarıyla eklendi...'));
+    builder: { // bir obje oluşturmamızı sağlar
+        title: { // title adında bir obje oluşturduk
+            describe: 'Not Başlığı', // bu objenin açıklaması
+            demandOption: true, // bu parametrenin zorunlu olup olmadığını belirledik
+            type: 'string', // gelecek parametrenin tipini belirledik
+        },
+        body: {
+            describe: 'Not içeriği',
+            demandOption: true,
+            type: 'string',
+        }
+    },
+    handler: (argv) => { // komut çalıştırılınca gerçekleştirilecek fonksiyon
+        //console.log(chalk.green.bold('Başlık: ' + argv.title + '\nİçerik: ' + argv.body + '\nBaşarıyla eklendi...'));
+        notes.add_note(argv.title, argv.body);
     }
 });
 yargs.command({
-    command: 'sil', // komutun adı
-    describe: 'Bir not silebilirsiniz', // komutun açıklaması
-    handler: () => { // komut çalıştırılınca gerçekleştirilecek fonksiyon
-        console.log(chalk.red.bold('Not başarıyla silindi...'));
+    command: 'sil',
+    describe: 'Bir not silebilirsiniz',
+    builder: {
+        title: {
+            describe: 'Silinecek not başlığı',
+            demandOption: true,
+            type: 'string',
+        }
+    },
+    handler: (argv) => {
+        //console.log(chalk.red.bold('Not başarıyla silindi...'));
+        notes.remove_note(argv.title);
     }
 });
 yargs.command({
-    command: 'listele', // komutun adı
-    describe: 'Bütün Notları Listeleyebilirsiniz', // komutun açıklaması
-    handler: () => { // komut çalıştırılınca gerçekleştirilecek fonksiyon
-        console.log(chalk.blue.bold('Not listesi...'));
+    command: 'listele',
+    describe: 'Bütün notları listeleyebilirsiniz',
+    handler: () => {
+        //console.log(chalk.blue.bold('Not listesi...'));
+        notes.notlari_listele();
     }
 });
 yargs.command({
-    command: 'oku', // komutun adı
-    describe: 'Bir not okuyabilirsiniz', // komutun açıklaması
-    handler: () => { // komut çalıştırılınca gerçekleştirilecek fonksiyon
-        console.log(chalk.yellow.bold('Not okunuyor...'));
+    command: 'oku',
+    describe: 'Bir not okuyabilirsiniz',
+    builder: {
+        title: {
+            describe: 'Okunacak Mesaj Başlığı',
+            demandOption: true,
+            type: 'string',
+        },
+    },
+    handler: (argv) => {
+        //console.log(chalk.yellow.bold('Not okunuyor...'));
+        notes.read_note(argv.title);
     }
 });
-console.log(yargs.argv);
+
+yargs.parse(); // cli argümanlarımızı parse etmesi için gerekli olan kod parçacığı
+//console.log(yargs.argv);
